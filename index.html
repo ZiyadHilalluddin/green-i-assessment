@@ -364,14 +364,12 @@
         });
       });
 
-      // Close when clicking outside
       document.addEventListener("click", (e) => {
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
           navLinks.classList.remove("active");
         }
       });
 
-      // Add "Contact" link only on mobile menu
       function injectContactLinkMobile() {
         const isMobile = window.innerWidth <= 768;
         const existing = document.querySelector(".nav-links .contact-mobile");
@@ -386,6 +384,10 @@
           contactLink.addEventListener("click", () => {
             navLinks.classList.remove("active");
           });
+        }
+
+        if (!isMobile && existing) {
+          existing.remove();
         }
       }
 

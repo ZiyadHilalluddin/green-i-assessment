@@ -429,12 +429,16 @@ body::-webkit-scrollbar {
 
 .stats-left {
   flex: 1;
-  background-color: #c8ec80;
+  background-image: url('background_3.png');
+  background-size: cover;         /* Ensures it fills the container */
+  background-position: center;    /* Keeps the image centered */
+  background-repeat: no-repeat;   /* Prevents tiling */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 .stats-left h3 {
   font-size: 3rem;
@@ -1060,6 +1064,10 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.contact-form button{
+  border-radius: 5%;
 }
 
 .contact-form input::placeholder,
